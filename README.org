@@ -1,0 +1,90 @@
+#+title: Readme
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/Users/julianjagerndorfer/org-roam/VWA/Stylesheets/style.css">
+#+latex_class: VWA
+#+latex_header: \class{7D}
+#+options: toc:nil'
+\tableofcontents
+* Installment
+** Placement
+Ideally this class should be placed at your latex install, to figure out were exactly run this command in your terminal
+#+begin_src bash
+kpsepath -n latex tex
+#+end_src
+For me this outputs many different directories, I settled with
+#+begin_src bash
+/Users/julianjagerndorfer/Library/texlive/2022/texmf-var/tex/latex/VWA.cls
+#+end_src
+(at future me whenever you feel like changing and modifying this file keep this path in mind!)
+** Adding to org-mode latex-exports
+In case you want to use this class when using org-mode you have to  tell this your config.el or config.org, depending if you have an literate config or not, and your org-preamble..
+
+Put this into your config.el/org:
+#+begin_src elisp
+(with-eval-after-load 'ox-latex
+   (add-to-list 'org-latex-classes
+                '("VWA"
+                  "\\documentclass{VWA}"
+                  ("\\section{%s}" . "\\section*{%s}")
+                  ("\\subsection{%s}" . "\\subsection*{%s}")
+                  ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))))
+#+end_src
+
+and this at the very beginning of your .org file
+#+begin_src org
+#+latex_class: VWA
+#+end_src
+do not forget to restart Emacs after you have modified your config files.
+* Custom commands
+** Definitions
+#+begin_src org
+\newtheorem{mydef}{Definition}
+\newtheorem{bsp}{Beispiel}
+\newtheorem{theorem}{Satz}
+#+end_src
+I don't actually know what this are doing I only added them for the sake of completeness.
+** Commands
+*** Supervisor
+This variable is to be specified at the beginning of your document, in the preamble. With it you can define who your "Betreuungslehrperson" is.
+It has to be done in the form
+#+begin_src org
+\supervisor{Name des Betreuers}
+#+end_src
+*** Schoolyear
+This command is needed to display the correct school-year of your VWA. You do not have to specify it by hand, you just have to specify the date, which is automatically done when you use org-latex-export.
+If you want to you can also call in the middle of your document, this has to be done in the form
+#+begin_src org
+\schoolyear{}
+#+end_src
+*** Class
+This command let's you specify your class.
+It belongs into the heaader
+#+begin_src org
+\class{Klasse}
+#+end_src
+
+* Usage
+When really writing your VWA you have to modify some things.
+
+To make the abstract unnumbered you have to add this under the header:
+#+begin_src org
+,* abstract-header
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+#+end_src
+
+Furthermore if you want to follow the guidelines of our school you have to deactivate the table-of-contents in the beginning and manually put it after your abstract.
+
+This would be done something like this:
+#+begin_src org
+,#+title: some title
+,#+options: toc:nil
+
+the rest of your header...
+
+your abstract...
+
+\tableofcontents
+
+rest of your document
+#+end_src
