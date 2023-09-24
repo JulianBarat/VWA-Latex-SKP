@@ -7,12 +7,16 @@
 ** Who is this class for?
 Ideally it is for students of the "Sir Karl Popperschule" or "Wiedner Gymnasium" who would like to write their VWA or VWS in LaTeX or some markup-language which they then compile to LaTeX, e.g. org-mode. But it is also meant as a starting point for students of other schools, who would like to write their own classes for their VWAs, but admittedly they would probably be better options like [[https://github.com/novoid/LaTeX-KOMA-VWA]], if you need more examples, simply google keywords like "VWA Latex" .
 
-** Why would I choose this over Microsoft Word, LibreOffice, OpenOffice & CO
+** Why would I choose this over Microsoft Word, LibreOffice, OpenOffice & CO?
 I could write a whole rant about why Word is cooperate and proprietary shit and why it can get messy writing in an WYSIWYG-environment, but they are people who know this stuff much better than I do and can put their point better across, so I will just say some standard key-points regarding this debate.
 - it has the best math-support out there
 - it is completly free, or how Richard Stallman would put it is "libre" and not "gratis"
 - it is WYWIWYG, this can be a plus or minus point depending on your personal preference
 - you don't have to worry much about styling and pagebreaks while editing
+** What editor do I have to use?
+Theoretically you could write this in every editor, even notepad and vi, but I would recommend something like Texmaker, Overleaf or VSCode, preferable VSCodium, or if you are a real try-hard or Org-mode-lover Emacs. It really boils down to the question, "Which editor do I like best?".
+
+
 * Installation
 ** Download and Placement
 To use this class you have to clone this git repo into your latex install with this command:
@@ -28,25 +32,10 @@ For Apple-Users this will probably output many different directories, I would su
 #+begin_src bash
 /Users/<your_name>/Library/texlive/2022/texmf-var/tex/latex/VWA.cls
 #+end_src
-** Adding to org-mode latex-exports
-In case you want to use this class when using org-mode you have to  tell this your config.el or config.org, depending if you have an literate config or not, and your org-preamble..
 
-Put this into your config.el/org:
-#+begin_src elisp
-(with-eval-after-load 'ox-latex
-   (add-to-list 'org-latex-classes
-                '("VWA"
-                  "\\documentclass{VWA}"
-                  ("\\section{%s}" . "\\section*{%s}")
-                  ("\\subsection{%s}" . "\\subsection*{%s}")
-                  ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))))
-#+end_src
+Note:
 
-and this at the very beginning of your .org file
-#+begin_src org
-#+latex_class: VWA
-#+end_src
-do not forget to restart Emacs after you have modified your config files.
+if you are using Overleaf you don't have to do all this you only need to upload the VWA.cls and the img folder to your project and specify everything in the preamble.
 * Custom commands
 ** Definitions
 #+begin_src org
@@ -74,8 +63,57 @@ It belongs into the heaader
 #+begin_src org
 \class{Klasse}
 #+end_src
-
 * Usage
+Some things to keep in mind while writing the VWS/A
+- specify the author in the preamble
+- specify your supervisor in the preamble
+- specify your class in the preamble
+- specify the date in the preamble
+- use unnumbered sections for your abstract
+- put the tableofcontents after the abstract
+
+An example pseudo code would look like this:
+#+begin_src latex
+\documentclass{VWA}
+\today
+\author{Max Mustermann}
+\supervisor{Herr Prof. Gruber}
+\class{8m}
+
+\begin{document}
+\section*{Abstract}
+text…
+
+\tableofcontents
+
+… rest of your document
+
+\end{document}
+
+#+end_src
+
+* Emacs org-mode
+
+** Adding to org-mode latex-exports
+In case you want to use this class when using org-mode you have to  tell this your config.el or config.org, depending if you have an literate config or not, and your org-preamble..
+
+Put this into your config.el/org:
+#+begin_src elisp
+(with-eval-after-load 'ox-latex
+   (add-to-list 'org-latex-classes
+                '("VWA"
+                  "\\documentclass{VWA}"
+                  ("\\section{%s}" . "\\section*{%s}")
+                  ("\\subsection{%s}" . "\\subsection*{%s}")
+                  ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))))
+#+end_src
+
+and this at the very beginning of your .org file
+#+begin_src org
+#+latex_class: VWA
+#+end_src
+do not forget to restart Emacs after you have modified your config files.
+** Usage
 When really writing your VWA you have to modify some things.
 
 To make the abstract unnumbered you have to add this under the header:
