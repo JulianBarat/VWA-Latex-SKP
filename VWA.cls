@@ -16,6 +16,7 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage[authordate,backend=biber]{biblatex-chicago}
+\usepackage{graphicx}
 %\usepackage[authordate-trad,backend=biber]{biblatex-chicago}
 %\usepackage[backend=bibtex8,style=numeric,sorting=nyt]{biblatex}
 \usepackage{tikz}
@@ -63,6 +64,9 @@
 }
 
 \newcommand{\@class}{}
+
+% the logo
+\graphicspath{{img/}}
 % title page
 
 \renewcommand{\maketitle}{%
@@ -71,7 +75,7 @@
     \flushright
 
     %the path to the schoollogo belongs here
-    \includegraphics[scale=1]{~/org-roam/VWA/Stylesheets/Latex/Bilder/Logo_50x12mm.png}
+    \includegraphics[scale=1]{Logo_50x12mm.png}
     ~\linebreak\linebreak
     \end{figure}
     \centering
