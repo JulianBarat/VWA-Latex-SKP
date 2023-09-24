@@ -3,18 +3,31 @@
 #+latex_class: VWA
 #+latex_header: \class{7D}
 #+options: toc:nil'
-\tableofcontents
-* Installment
-** Placement
-Ideally this class should be placed at your latex install, to figure out were exactly run this command in your terminal
+* Introduction
+** Who is this class for?
+Ideally it is for students of the "Sir Karl Popperschule" or "Wiedner Gymnasium" who would like to write their VWA or VWS in LaTeX or some markup-language which they then compile to LaTeX, e.g. org-mode. But it is also meant as a starting point for students of other schools, who would like to write their own classes for their VWAs, but admittedly they would probably be better options like [[https://github.com/novoid/LaTeX-KOMA-VWA]], if you need more examples, simply google keywords like "VWA Latex" .
+
+** Why would I choose this over Microsoft Word, LibreOffice, OpenOffice & CO
+I could write a whole rant about why Word is cooperate and proprietary shit and why it can get messy writing in an WYSIWYG-environment, but they are people who know this stuff much better than I do and can put their point better across, so I will just say some standard key-points regarding this debate.
+- it has the best math-support out there
+- it is completly free, or how Richard Stallman would put it is "libre" and not "gratis"
+- it is WYWIWYG, this can be a plus or minus point depending on your personal preference
+- you don't have to worry much about styling and pagebreaks while editing
+* Installation
+** Download and Placement
+To use this class you have to clone this git repo into your latex install with this command:
+#+begin_src bash
+git clone https://github.com/JulianBarat/VWA-Latex-SKP.git
+#+end_src
+To figure out were exactly your latex install is run this command in your terminal
 #+begin_src bash
 kpsepath -n latex tex
 #+end_src
-For me this outputs many different directories, I settled with
+
+For Apple-Users this will probably output many different directories, I would suggest this path, because you don't have fiddle around much with writing-rights:
 #+begin_src bash
-/Users/julianjagerndorfer/Library/texlive/2022/texmf-var/tex/latex/VWA.cls
+/Users/<your_name>/Library/texlive/2022/texmf-var/tex/latex/VWA.cls
 #+end_src
-(at future me whenever you feel like changing and modifying this file keep this path in mind!)
 ** Adding to org-mode latex-exports
 In case you want to use this class when using org-mode you have to  tell this your config.el or config.org, depending if you have an literate config or not, and your org-preamble..
 
