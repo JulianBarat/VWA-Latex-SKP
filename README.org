@@ -11,7 +11,7 @@ Ideally it is for students of the "Sir Karl Popperschule" or "Wiedner Gymnasium"
 I could write a whole rant about why Word is cooperate and proprietary shit and why it can get messy writing in an WYSIWYG-environment, but they are people who know this stuff much better than I do and can put their point better across, so I will just say some standard key-points regarding this debate.
 - it has the best math-support out there
 - it is completly free, or how Richard Stallman would put it is "libre" and not "gratis"
-- it is WYWIWYG, this can be a plus or minus point depending on your personal preference
+- it is WYMIWYG, this can be a plus or minus point depending on your personal preference
 - you don't have to worry much about styling and pagebreaks while editing
 ** What editor do I have to use?
 Theoretically you could write this in every editor, even notepad and vi, but I would recommend something like Texmaker, Overleaf or VSCode, preferable VSCodium, or if you are a real try-hard or Org-mode-lover Emacs. It really boils down to the question, "Which editor do I like best?".
