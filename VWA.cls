@@ -79,7 +79,7 @@
     ~\linebreak\linebreak
     \end{figure}
     \centering
-    {\Large Vorwisssenschaftliche Arbeit im Rahmen der Reifeprüfung}
+    {\Large Vorwissenschaftliche Arbeit im Rahmen der Reifeprüfung}
 
     \vspace{5cm}
 

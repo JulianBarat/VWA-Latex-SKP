@@ -74,12 +74,14 @@ Some things to keep in mind while writing the VWS/A
 An example pseudo code would look like this:
 #+begin_src latex
 \documentclass{VWA}
-\today
+\title{eine faszinierende Arbeit zu der Fortpflanzung der Stiglize}
+\date{\today}
 \author{Max Mustermann}
 \supervisor{Herr Prof. Gruber}
 \class{8m}
 
 \begin{document}
+\maketitle
 \section*{Abstract}
 text…
 
