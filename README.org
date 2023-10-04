@@ -42,7 +42,7 @@ if you are using Overleaf you don't have to do all this you only need to upload 
 \newtheorem{bsp}{Beispiel}
 \newtheorem{theorem}{Satz}
 #+end_src
-I don't actually know what this are doing I only added them for the sake of completeness.
+I don't actually know what these are doing I only added them for the sake of completeness.
 ** Commands
 *** Supervisor
 This variable is to be specified at the beginning of your document, in the preamble. With it you can define who your "Betreuungslehrperson" is.
