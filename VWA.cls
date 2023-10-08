@@ -93,7 +93,7 @@
     Schule\\A-1040 Wien, Wiedner Gürtel 68}\linebreak\linebreak
     {\Large Betreuungslehrperson: \@supervisor{}}\\[0.3cm]
     {\Large Vorgelegt am \today}
-\end{titlepage}
+  \end{titlepage}
 
 }
 
