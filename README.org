@@ -60,7 +60,7 @@ If you want to you can also call in the middle of your document, but it has to b
 This command lets you specify your class.
 It belongs into the header
 #+begin_src org
-\class{students class}
+\class{student's class}
 #+end_src
 * Usage
 Some things to keep in mind while writing the VWA/S
