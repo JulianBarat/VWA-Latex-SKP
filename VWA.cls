@@ -17,6 +17,7 @@
 \usepackage{mathtools}
 \usepackage[authordate,backend=biber]{biblatex-chicago}
 \usepackage{graphicx}
+\usepackage[left=2cm, right=2cm]{geometry}
 %\usepackage[authordate-trad,backend=biber]{biblatex-chicago}
 %\usepackage[backend=bibtex8,style=numeric,sorting=nyt]{biblatex}
 \usepackage{tikz}
