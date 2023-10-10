@@ -17,6 +17,7 @@
 \usepackage{mathtools}
 \usepackage[authordate,backend=biber]{biblatex-chicago}
 \usepackage{graphicx}
+\usepackage[left=2cm, right=2cm]{geometry}
 %\usepackage[authordate-trad,backend=biber]{biblatex-chicago}
 %\usepackage[backend=bibtex8,style=numeric,sorting=nyt]{biblatex}
 \usepackage{tikz}
@@ -93,7 +94,7 @@
     Schule\\A-1040 Wien, Wiedner Gürtel 68}\linebreak\linebreak
     {\Large Betreuungslehrperson: \@supervisor{}}\\[0.3cm]
     {\Large Vorgelegt am \today}
-\end{titlepage}
+  \end{titlepage}
 
 }
 

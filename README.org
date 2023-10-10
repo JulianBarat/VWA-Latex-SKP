@@ -4,16 +4,16 @@
 #+options: toc:nil'
 * Introduction
 ** Who is this class for?
-Ideally it is for students of the "Sir Karl Popperschule" or "Wiedner Gymnasium" who would like to write their VWA or VWS in LaTeX or some markup-language which they then compile to LaTeX, e.g. org-mode. But it is also meant as a starting point for students of other schools, who would like to write their own classes for their VWAs, but admittedly they would probably be better options like [[https://github.com/novoid/LaTeX-KOMA-VWA]], if you need more examples, simply google keywords like "VWA Latex" .
+Ideally it is for students of the "Sir Karl Popper Schule" or "Wiedner Gymnasium" who would like to write their VWA or VWS in LaTeX or some markup-language which they then compile to LaTeX, e.g. org-mode. But it is also meant as a starting point for students of other schools, who would like to write their own classes for their VWAs, but admittedly there would probably be better options like [[https://github.com/novoid/LaTeX-KOMA-VWA]]. If you need more examples, simply google keywords like "VWA Latex".
 
 ** Why would I choose this over Microsoft Word, LibreOffice, OpenOffice & CO?
-I could write a whole rant about why Word is cooperate and proprietary shit and why it can get messy writing in an WYSIWYG-environment, but they are people who know this stuff much better than I do and can put their point better across, so I will just say some standard key-points regarding this debate.
+I could write a whole rant about why Word is cooperate and proprietary shit and why it can get messy writing in an WYSIWYG-environment, but there are people who know this stuff much better than I do and can put their point better across, so I will just say some standard key-points regarding this debate.
 - it has the best math-support out there
-- it is completly free, or how Richard Stallman would put it is "libre" and not "gratis"
+- it is completly free, or how Richard Stallman would put it: it is "libre" and not "gratis"
 - it is WYMIWYG, this can be a plus or minus point depending on your personal preference
 - you don't have to worry much about styling and pagebreaks while editing
 ** What editor do I have to use?
-Theoretically you could write this in every editor, even notepad and vi, but I would recommend something like Texmaker, Overleaf or VSCode, preferable VSCodium, or if you are a real try-hard or Org-mode-lover Emacs. It really boils down to the question, "Which editor do I like best?".
+Theoretically you could write this in every editor, even notepad and vi, but I would recommend something like Texmaker, Overleaf or VSCode, preferable VSCodium, or if you are a real try-hard or Org-mode-lover Emacs. It really boils down to the question:"Which editor do I like best?".
 
 
 * Installation
@@ -27,14 +27,14 @@ To figure out were exactly your latex install is run this command in your termin
 kpsepath -n latex tex
 #+end_src
 
-For Apple-Users this will probably output many different directories, I would suggest this path, because you don't have fiddle around much with writing-rights:
+For Apple-Users this will probably output many different directories, I would suggest this path, because you don't have to fiddle around much with writing-rights:
 #+begin_src bash
 /Users/<your_name>/Library/texlive/2022/texmf-var/tex/latex/VWA.cls
 #+end_src
 
 Note:
 
-if you are using Overleaf you don't have to do all this you only need to upload the VWA.cls and the img folder to your project and specify everything in the preamble.
+If you are using Overleaf you don't have to do all this you only need to upload the VWA.cls and the img folder to your project and specify everything in the preamble.
 * Custom commands
 ** Definitions
 #+begin_src org
@@ -42,28 +42,28 @@ if you are using Overleaf you don't have to do all this you only need to upload 
 \newtheorem{bsp}{Beispiel}
 \newtheorem{theorem}{Satz}
 #+end_src
-I don't actually know what this are doing I only added them for the sake of completeness.
+I don't actually know what these are doing I only added them for the sake of completeness.
 ** Commands
 *** Supervisor
-This variable is to be specified at the beginning of your document, in the preamble. With it you can define who your "Betreuungslehrperson" is.
+This variable is to be specified at the beginning of your document, in the preamble. With it you can define who your supervisor is.
 It has to be done in the form
 #+begin_src org
-\supervisor{Name des Betreuers}
+\supervisor{name of supervisor}
 #+end_src
 *** Schoolyear
 This command is needed to display the correct school-year of your VWA. You do not have to specify it by hand, you just have to specify the date, which is automatically done when you use org-latex-export.
-If you want to you can also call in the middle of your document, this has to be done in the form
+If you want to you can also call in the middle of your document, but it has to be done in the form
 #+begin_src org
 \schoolyear{}
 #+end_src
 *** Class
-This command let's you specify your class.
-It belongs into the heaader
+This command lets you specify your class.
+It belongs into the header
 #+begin_src org
-\class{Klasse}
+\class{student's class}
 #+end_src
 * Usage
-Some things to keep in mind while writing the VWS/A
+Some things to keep in mind while writing the VWA/S
 - specify the author in the preamble
 - specify your supervisor in the preamble
 - specify your class in the preamble
@@ -71,7 +71,7 @@ Some things to keep in mind while writing the VWS/A
 - use unnumbered sections for your abstract
 - put the tableofcontents after the abstract
 
-An example pseudo code would look like this:
+An example pseudocode would look like this:
 #+begin_src latex
 \documentclass{VWA}
 \title{eine faszinierende Arbeit zu der Fortpflanzung der Stiglize}
@@ -96,7 +96,7 @@ text…
 * Emacs org-mode
 
 ** Adding to org-mode latex-exports
-In case you want to use this class when using org-mode you have to  tell this your config.el or config.org, depending if you have an literate config or not, and your org-preamble..
+In case you want to use this class when using org-mode you have to tell this your config.el or config.org, depending if you have an literate config or not, and your org-preamble.
 
 Put this into your config.el/org:
 #+begin_src elisp
