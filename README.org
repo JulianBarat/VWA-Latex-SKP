@@ -125,7 +125,7 @@ To make the abstract unnumbered you have to add this under the header:
 :END:
 #+end_src
 
-Furthermore if you want to follow the guidelines of our school you have to deactivate the table-of-contents in the beginning and manually put it after your abstract.
+Furthermore, if you want to follow the guidelines of our school you have to deactivate the table-of-contents in the beginning and manually put it after your abstract.
 
 This would be done something like this:
 #+begin_src org
@@ -141,4 +141,4 @@ your abstract...
 rest of your document
 #+end_src
 * common issues
-if the date is falsely displayed i.e. "24 by + 1 24/25" try deleting "by + 1" in line 50.
+if the date is falsely displayed i.e. "24 by + 1 24/25" try deleting "by + 1" in line 50. in VWA.cls
