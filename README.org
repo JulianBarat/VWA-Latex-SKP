@@ -141,4 +141,5 @@ your abstract...
 rest of your document
 #+end_src
 * Common Issues
+** Date
 If the date is wrongly displayed (e.g. "24 by + 1 24/25"), try deleting "by + 1" in line 50 of VWA.cls
