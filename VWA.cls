@@ -3,7 +3,7 @@
 \ProvidesClass{VWA}
 
 % Loading the class
-\LoadClass[11pt,a4paper,oneside,BCOR18mm,DIV13,titlepage]{scrartcl}
+\LoadClass[11pt,a4paper,oneside,BCOR18mm,DIV13,titlepage]{article}
 
 % requiring packages
 
