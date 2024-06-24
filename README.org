@@ -140,3 +140,5 @@ your abstract...
 
 rest of your document
 #+end_src
+* common issues
+if the date is falsely displayed i.e. "24 by + 1 24/25" try deleting "by + 1" in line 50.
