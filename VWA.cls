@@ -14,6 +14,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage[hidelinks]{hyperref}
 \usepackage{mathtools}
 \usepackage[authordate,backend=biber]{biblatex-chicago}
 \usepackage{graphicx}
