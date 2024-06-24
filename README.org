@@ -7,13 +7,13 @@
 Ideally it is for students of the "Sir Karl Popper Schule" or "Wiedner Gymnasium" who would like to write their VWA or VWS in LaTeX or some markup-language which they then compile to LaTeX, e.g. org-mode. But it is also meant as a starting point for students of other schools, who would like to write their own classes for their VWAs, but admittedly there would probably be better options like [[https://github.com/novoid/LaTeX-KOMA-VWA]]. If you need more examples, simply google keywords like "VWA Latex".
 
 ** Why would I choose this over Microsoft Word, LibreOffice, OpenOffice & CO?
-I could write a whole rant about why Word is cooperate and proprietary shit and why it can get messy writing in an WYSIWYG-environment, but there are people who know this stuff much better than I do and can put their point better across, so I will just say some standard key-points regarding this debate.
+I could write a whole rant about why Word is cooperate and proprietary shit and why it can get messy writing in an WYSIWYG-environment, but there are people who know this stuff much better than I do and can get their point across much better, so I will just mention some standard key-points regarding this debate:
 - it has the best math-support out there
 - it is completly free, or how Richard Stallman would put it: it is "libre" and not "gratis"
-- it is WYMIWYG, this can be a plus or minus point depending on your personal preference
+- it is WYMIWYG, this can be a pro or con point depending on your personal preferences
 - you don't have to worry much about styling and pagebreaks while editing
 ** What editor do I have to use?
-Theoretically you could write this in every editor, even notepad and vi, but I would recommend something like Texmaker, Overleaf or VSCode, preferable VSCodium, or if you are a real try-hard or Org-mode-lover Emacs. It really boils down to the question:"Which editor do I like best?".
+Theoretically you could write this in every editor, even notepad and vi, but I would recommend something like Texmaker, Overleaf or VSCode, preferably VSCodium, or, if you are a real try-hard or Org-mode-lover, Emacs. It really boils down to the question: "Which editor do I like best?".
 
 
 * Installation
@@ -22,7 +22,7 @@ To use this class you have to clone this git repo into your latex install with t
 #+begin_src bash
 git clone https://github.com/JulianBarat/VWA-Latex-SKP.git
 #+end_src
-To figure out were exactly your latex install is run this command in your terminal
+To figure out where exactly your latex install is, run this command in your terminal:
 #+begin_src bash
 kpsepath -n latex tex
 #+end_src
@@ -34,7 +34,7 @@ For Apple-Users this will probably output many different directories, I would su
 
 Note:
 
-If you are using Overleaf you don't have to do all this you only need to upload the VWA.cls and the img folder to your project and specify everything in the preamble.
+If you are using Overleaf you don't have to do all this; you only need to upload the VWA.cls and the img folder to your project and specify everything in the preamble.
 * Custom commands
 ** Definitions
 #+begin_src org
@@ -42,23 +42,23 @@ If you are using Overleaf you don't have to do all this you only need to upload 
 \newtheorem{bsp}{Beispiel}
 \newtheorem{theorem}{Satz}
 #+end_src
-I don't actually know what these are doing I only added them for the sake of completeness.
+I don't actually know what these do; I only added them for the sake of completeness.
 ** Commands
 *** Supervisor
 This variable is to be specified at the beginning of your document, in the preamble. With it you can define who your supervisor is.
-It has to be done in the form
+It has to be done in the form of:
 #+begin_src org
 \supervisor{name of supervisor}
 #+end_src
 *** Schoolyear
 This command is needed to display the correct school-year of your VWA. You do not have to specify it by hand, you just have to specify the date, which is automatically done when you use org-latex-export.
-If you want to you can also call in the middle of your document, but it has to be done in the form
+If you want to, you can also call it in the middle of your document, but it has to be done in the form of: 
 #+begin_src org
 \schoolyear{}
 #+end_src
 *** Class
 This command lets you specify your class.
-It belongs into the header
+It belongs into the header.
 #+begin_src org
 \class{student's class}
 #+end_src
@@ -96,7 +96,7 @@ text…
 * Emacs org-mode
 
 ** Adding to org-mode latex-exports
-In case you want to use this class when using org-mode you have to tell this your config.el or config.org, depending if you have an literate config or not, and your org-preamble.
+In case you want to use this class when using org-mode you have to tell that your config.el or config.org, depending on whether you have an literate config or not, and your org-preamble.
 
 Put this into your config.el/org:
 #+begin_src elisp
@@ -109,7 +109,7 @@ Put this into your config.el/org:
                   ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))))
 #+end_src
 
-and this at the very beginning of your .org file
+and this at the very beginning of your .org file:
 #+begin_src org
 #+latex_class: VWA
 #+end_src
@@ -125,7 +125,7 @@ To make the abstract unnumbered you have to add this under the header:
 :END:
 #+end_src
 
-Furthermore, if you want to follow the guidelines of our school you have to deactivate the table-of-contents in the beginning and manually put it after your abstract.
+Furthermore, if you want to follow the guidelines of our school, you have to deactivate the table-of-contents in the beginning and manually put it after your abstract.
 
 This would be done something like this:
 #+begin_src org
@@ -140,5 +140,5 @@ your abstract...
 
 rest of your document
 #+end_src
-* common issues
-if the date is falsely displayed i.e. "24 by + 1 24/25" try deleting "by + 1" in line 50. in VWA.cls
+* Common Issues
+If the date is wrongly displayed (e.g. "24 by + 1 24/25"), try deleting "by + 1" in line 50 of VWA.cls
